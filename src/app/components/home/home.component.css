@@ -1,0 +1,31 @@
+/* Main Section */
+.main {
+    margin: auto;
+    text-align: center;
+    padding: 50px; /* Reduced padding */
+    padding-top: 120px; /* Adjusted padding-top to reduce the gap */
+    font-size: 50px;
+    font-family: "Nunito", serif;
+    color: black;
+}
+
+/* Container and Search Bar */
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Reduced margin-top for tighter spacing */
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

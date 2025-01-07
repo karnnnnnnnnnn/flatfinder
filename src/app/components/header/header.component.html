@@ -1,0 +1,61 @@
+<header>
+  <h1>
+    <a routerLink="/" class="logo">flatfinder</a>
+  </h1>
+  <ul class="navbar">
+    <li><a routerLink="/rental">rental</a></li>
+    <li><a routerLink="/favorite">favorite</a></li>
+    <li>
+      <a id="loginLogoutButton" (click)="toggleLoginModal()">
+        {{ isLoggedIn ? 'logout' : 'login' }}
+      </a>
+    </li>
+    <li><a class="register" (click)="toggleRegisterModal()">register</a></li>
+  </ul>
+</header>
+
+<!-- Login Modal -->
+<div *ngIf="showLoginModal" id="loginModal">
+  <div class="modal-content">
+    <span class="close-btn" (click)="showLoginModal = false">&times;</span>
+    <h1>login</h1>
+    <div class="input-field" *ngFor="let field of loginFields">
+      <label [for]="field.id">{{ field.label }}</label>
+      <input
+        [type]="field.type"
+        [id]="field.id"
+        [(ngModel)]="user[field.id]"
+      />
+    </div>
+    <button (click)="validateLogin()">login</button>
+    <div id="result">
+      <p *ngIf="errorMessages.length > 0" style="color: red;">
+        {{ errorMessages.join(', ') }}
+      </p>
+      <p *ngIf="loginValidationSuccess" style="color: green;">login complete.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div *ngIf="showRegisterModal" id="registerModal">
+  <div class="modal-content">
+    <span class="close-btn" (click)="showRegisterModal = false">&times;</span>
+    <h1>register</h1>
+    <div class="input-field" *ngFor="let field of registerFields">
+      <label [for]="field.id">{{ field.label }}</label>
+      <input
+        [type]="field.type"
+        [id]="field.id"
+        [(ngModel)]="user[field.id]"
+      />
+    </div>
+    <button (click)="validateRegister()">register</button>
+    <div id="result">
+      <p *ngIf="errorMessages.length > 0" style="color: red;">
+        {{ errorMessages.join(', ') }}
+      </p>
+      <p *ngIf="registerValidationSuccess" style="color: green;">you have registered.</p>
+    </div>
+  </div>
+</div>

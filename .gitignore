@@ -1,3 +1,72 @@
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+package-lock.json
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+/build/
+/benchpress-build/
+.DS_Store
+gen_docs.disable
+test.disable
+regression/temp*.html
+performance/temp*.html
+.idea/workspace.xml
+*~
+*.swp
+angular.js.tmproj
+node_modules/
+angular.xcodeproj
+.firebase/
+.idea
+*.iml
+.agignore
+.lvimrc
+libpeerconnection.log
+npm-debug.log
+/tmp/
+.vscode
+*.log
+*.stackdump
+scripts/code.angularjs.org-firebase/deploy
+scripts/docs.angularjs.org-firebase/deploy
+scripts/docs.angularjs.org-firebase/functions/content
+
 # Logs
 logs
 *.log

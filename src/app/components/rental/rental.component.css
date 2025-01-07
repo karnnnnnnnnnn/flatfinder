@@ -1,0 +1,113 @@
+.rental-container {
+  text-align: center;
+  margin: 80px 20px;
+  color: #333;
+}
+
+.rental-container h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: black;
+  font-weight: bold;
+}
+
+.rental-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.rental-card {
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 220px;
+  min-height: 280px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; /* Added for absolute positioning of the heart */
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rental-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.rental-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.rental-location {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+.rental-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #199B74;
+  margin-top: auto;
+}
+
+.favorite-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #999;
+  position: absolute;
+  bottom: 7px;
+  right: 0px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.favorite-button.favorited {
+  color: #ff6b6b;
+}
+
+.favorite-button:hover {
+  color: #ff6b6b;
+  transform: scale(1.1);
+}
+
+.main {
+  margin: auto;
+  text-align: center;
+  padding: 50px; /* Reduced padding */
+  padding-top: 120px; /* Adjusted padding-top to reduce the gap */
+  font-size: 50px;
+  font-family: "Nunito", serif;
+  color: black;
+}
+
+/* Container and Search Bar */
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px; /* Reduced margin-top for tighter spacing */
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
